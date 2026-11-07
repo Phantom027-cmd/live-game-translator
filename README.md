@@ -13,15 +13,18 @@ A real-time screen translation overlay for games and other applications. It capt
 - **Glossary and history**: consistent names and terms, plus a searchable log of past translations.
 
 ## Getting started with the build
-1. Open [`PROMPT.md`](PROMPT.md).
-2. Give it to Fable (paste it, or point Fable at this repository).
-3. Fable works in phases and commits each phase here.
+1. Install prerequisites (Rust, Claude Code; verifies Git, CMake, MSVC, Windows SDK) from PowerShell:
+   `Set-ExecutionPolicy -Scope Process Bypass -Force; .\scripts\setup-windows.ps1`
+2. Open [`PROMPT.md`](PROMPT.md); decisions already made are in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+3. Run `claude` in this folder and ask it to start the next phase.
+4. Each phase is built and benchmarked on the owner's PC and committed here.
 
 ## Planned layout
 | Path | Purpose |
 |---|---|
 | `PROMPT.md` | Requirements and build specification (source of truth) |
-| `docs/ARCHITECTURE.md` | Design decisions, created in Phase 1 |
+| `docs/ARCHITECTURE.md` | Design decisions |
+| `scripts/` | Setup and helper scripts |
 | `src/` | Application source |
 | `bench/` | Benchmark harness and sample screenshots |
 | `models/` | Downloaded models (not committed) |
