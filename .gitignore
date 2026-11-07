@@ -1,0 +1,37 @@
+# Build output
+target/
+build/
+out/
+*.pdb
+
+# Models and compiled engines (downloaded at first run)
+models/
+*.onnx
+*.gguf
+*.engine
+*.trt
+*.bin
+
+# Runtime data
+cache/
+logs/
+history/
+*.log
+
+# Local config and secrets
+config.local.toml
+*.local.json
+.env
+.env.*
+secrets/
+
+# Hardware reports (contain machine identifiers)
+DxDiag*.txt
+hw-report*.json
+
+# Editor / OS
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
